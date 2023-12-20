@@ -899,9 +899,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  gravity: -7
+  gravity: -2
   jumpSpeedMultiplier: 3
-  jumpHeight: 5
+  jumpHeight: 9
 --- !u!114 &754239672
 MonoBehaviour:
   m_ObjectHideFlags: 0
