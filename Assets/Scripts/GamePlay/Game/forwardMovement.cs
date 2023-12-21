@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+
 public class forwardMovement : MonoBehaviour
 {
     public float movementSpeed = 5f;
@@ -9,6 +9,16 @@ public class forwardMovement : MonoBehaviour
     void Start()
     {
         // Assuming the player has a "Player" tag; adjust this if needed
+        Find_Player();
+    }
+
+    void Update()
+    {
+        Move_Platform();
+    }
+
+    void Find_Player() 
+    {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
@@ -20,7 +30,7 @@ public class forwardMovement : MonoBehaviour
         }
     }
 
-    void Update()
+    void Move_Platform() 
     {
         if (playerTransform != null)
         {
@@ -28,5 +38,6 @@ public class forwardMovement : MonoBehaviour
             transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
         }
     }
+
 }
 
